@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<app:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layouts.Views.view7100"
+            xmlns:app="clr-namespace:Layouts.Views"
+             Title="Configuración">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Config" CommandParameter="CONFIG" />
+        <ToolbarItem Text="Ciclo"  CommandParameter="CICLO" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="IP" FontSize="Medium" />
+            <Entry Text="192.168.4.4" FontSize="Small" />
+
+            <Label Text="Puerto" FontSize="Medium" />
+            <Entry Text="22589" FontSize="Small" />
+
+            <Label Text="Comunicación" FontSize="Medium" />
+            <Picker ItemsSource="{Binding CommOptions}" ></Picker>
+
+            <Switch IsEnabled="False" IsToggled="True" />
+            <Label Text="Iniciar base de datos" FontSize="Medium"/>
+
+            <Switch IsEnabled="True" IsToggled="False" />
+            <Label Text="Activa COLD" FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</app:BaseContentPage>

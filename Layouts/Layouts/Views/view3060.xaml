@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<app:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="Layouts.Views.view3060"
+                    xmlns:app="clr-namespace:Layouts.Views"
+                      Title="Bajar Producto"
+                     x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Cliente" FontSize="Medium" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Café Goiano" FontSize="Small" Grid.Row="0" Grid.Column="1" />
+
+                <Image Source="grid.png" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="400"/>
+
+                <Label Text="43421-Pan Blanco 640g MTA BIM" FontSize="Small" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                <Picker ItemsSource="DocOptions" Grid.Row="3" Grid.Column="0"  />
+                <Label Text="Total:18,21 &#8364;" FontSize="Small" Grid.Row="3" Grid.Column="1"  />
+
+                <Label Grid.Row="4" Grid.Column="1" Text="Cant:15" FontSize="Small" />
+
+                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Nota de crédito"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="1" >
+                    <Switch/>
+                    <Label Text="Pesito"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="6" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Redondo"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="7" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Cuadrado"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Amarillo"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="9" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Verde"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="10" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Protesta"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="11" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Enfaciterar"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="12" Grid.Column="0" >
+                    <Switch/>
+                    <Label Text="Identicket homogéneo"/>
+                </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+</app:BaseContentPage>

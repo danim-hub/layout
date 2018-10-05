@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<app:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:app="clr-namespace:Layouts.Views" ViewCode="9000" Icon="login_blanco.png"
+             x:Class="Layouts.Views.view3000" Title="La Ruta" x:Name="view9000">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="&lt;&lt;" Icon="mapa_blanco.png" Activated="ToolbarItem_Activated" Command="{Binding PageCommand}"  CommandParameter="MAP"/>
+        <ToolbarItem Text="open" Icon="whatsapp_blanco.png" CommandParameter="OPEN"/>
+        <ToolbarItem Text="save" Icon="mano_blanco.png" CommandParameter="SAVE"/>
+        <ToolbarItem Text="&gt;&gt;" Icon="subir_blanco.png" CommandParameter="SHARE" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="{Binding ContentOrientation}">
+            <StackLayout HorizontalOptions="Center">
+                <Label HorizontalOptions="Center">Centro de ventas</Label>
+                <Entry HorizontalOptions="Center" x:Name="txtCeve" Placeholder="99999" FontSize="Small" MaxLength="5" Keyboard="Numeric" ReturnType="Next" Text="{Binding Route}" Completed="Entry_Completed" />
+                <Label>Ruta</Label>
+                <Entry x:Name="txtRuta" Placeholder="0000" FontSize="Small" MaxLength="4" Keyboard="Numeric" ReturnType="Next" Text="{Binding Route}" Completed="Entry_Completed" />
+                <Label>NIP</Label>
+                <Entry x:Name="txtNIP" Placeholder="****" IsPassword="True" FontSize="Small" MaxLength="4" Keyboard="Numeric" ReturnType="Go" Completed="Entry_Completed" />
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="btnIngresar" Text="Ingresar"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</app:BaseContentPage>
